@@ -15,8 +15,9 @@
 * 7- fork the following repo https://github.com/mahmoud254/Booster_CI_CD_Project and add dockerfile to run this django app and  use github actions to build the docker image and push it to your dockerhub
 
 
-## 4- configure jenkins image to run docker commands on your host docker daemon
-### Docker file.
+## Answers
+### 4- configure jenkins image to run docker commands on your host docker daemon
+#### Docker file.
     ```
     FROM jenkins/jenkins:lts
     USER root
@@ -36,16 +37,16 @@
     RUN usermod -aG docker jenkins
 
     ```
-### Build and push the image.
+#### Build and push the image.
 
     ```
     docker build -t amrtarek6/my-nginx:tagname .
     docker push amrtarek6/my-nginx:tagname
     ```
 
-## 5- create CI/CD for this repo https://github.com/mahmoud254/jenkins_nodejs_example.git
+### 5- create CI/CD for this repo https://github.com/mahmoud254/jenkins_nodejs_example.git
 ![image](https://user-images.githubusercontent.com/47079437/215291089-acc413ff-5b53-4b94-9a68-ec20e39d24ca.png)
-### pipeline Code.
+#### pipeline Code.
 
     ```
     pipeline {
