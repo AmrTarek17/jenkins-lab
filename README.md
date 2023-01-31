@@ -10,8 +10,15 @@
 * 2- create container from this image and configure ssh 
 * 3 from jenkins maste create new node with the slave container
 * 4- integrate slack with jenkins
+![image](https://user-images.githubusercontent.com/47079437/215879453-11223b66-3c4b-4e85-9b9a-3a79f1db2b63.png)
+![image](https://user-images.githubusercontent.com/47079437/215880566-43c1561a-67d9-4559-add5-17589bbb372f.png)
+![image](https://user-images.githubusercontent.com/47079437/215881107-eb7d1c6d-5a3e-4508-b1cf-db9c8f93277e.png)
+![image](https://user-images.githubusercontent.com/47079437/215881320-729e8c63-c0b4-4ca0-91fe-14de226f8aa4.png)
 * 5- send slack message when stage in your pipeline is successful
+![image](https://user-images.githubusercontent.com/47079437/215890315-46bfd6cf-421d-4d5b-bc83-d7611aa92ad0.png)
 * 6- install audit logs plugin and test it
+![image](https://user-images.githubusercontent.com/47079437/215892107-678d3149-ee25-4d25-8ef1-0f02b2506364.png)
+![image](https://user-images.githubusercontent.com/47079437/215893938-4a8241ff-33ae-44c3-a496-3847f4398459.png)
 * 7- fork the following repo https://github.com/mahmoud254/Booster_CI_CD_Project and add dockerfile to run this django app and  use github actions to build the docker image and push it to your dockerhub
 
 
