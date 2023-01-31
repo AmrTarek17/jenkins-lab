@@ -56,30 +56,40 @@
 #### pipeline Code.
 
     ```
-    pipeline {
-        agent any
-        stages {
-            stage('CI') {
-                steps {
-                    git 'https://github.com/mahmoud254/jenkins_nodejs_example'
-                    withCredentials([usernamePassword(credentialsId: 'Amr-Dockerhub', usernameVariable: 'USER_NAME', passwordVariable: 'PASS')]) {
-                        sh "docker build . -f dockerfile -t ${USER_NAME}/node-app:v1"
-                        sh "docker login -u ${USER_NAME} -p ${PASS}"
-                        sh "docker push ${USER_NAME}/node-app:v1"
-                    }
-                }
-            }
-
-            stage('CD') {
-                steps {
-                    withCredentials([usernamePassword(credentialsId: 'Amr-Dockerhub', usernameVariable: 'USER_NAME', passwordVariable: 'PASS')]) {
-                        sh "docker login -u ${USER_NAME} -p ${PASS}"
-                        sh "docker run -d -p 3030:3000 ${USER_NAME}/node-app:v1"
-                    }
+pipeline {
+    agent any
+    stages {
+        stage('CI') {
+            steps {
+                git 'https://github.com/mahmoud254/jenkins_nodejs_example'
+                withCredentials([usernamePassword(credentialsId: 'Dockerhub', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                    sh "docker build . -f dockerfile -t ${USER}/node-app:v1"
+                    sh "docker login -u ${USER} -p ${PASS}"
+                    sh "docker push ${USER}/node-app:v1"
                 }
             }
         }
+
+        stage('CD') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'Dockerhub', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                    sh "docker login -u ${USER} -p ${PASS}"
+                    sh "docker run -d -p 3030:3000 ${USER}/node-app:v1"
+                }
+            }
+        }
+        
     }
+    post{ 
+        success { 
+            slackSend(message: "success tes")
+        }
+        failure { 
+            slackSend(message: "failure Run")
+        }
+    }
+        
+}
     ```
 ### Setup Infra
 * First setup your GCP account, create new project and change the value of "project_name" variable in terraform.tfvars with your PROJECT-ID.
