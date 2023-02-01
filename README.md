@@ -88,6 +88,9 @@
 
         }
     ```
+#### Runing app
+
+![image](https://user-images.githubusercontent.com/47079437/216125861-bb02ffc7-735e-4bf2-ac09-9af2746c61ae.png)
     
 ### 1- create docker file to build image for jenkins slave
 #### Dockefile_slave Code.
