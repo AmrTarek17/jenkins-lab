@@ -132,7 +132,7 @@
 ![image](https://user-images.githubusercontent.com/47079437/216120254-0d0472a7-8566-49d4-81d7-2c9e605fea78.png)
 ![image](https://user-images.githubusercontent.com/47079437/216123089-9044a861-7017-4bc1-93ae-aff13ea1070f.png)
 
-#### runing app with slave node
+#### runing app with slave node using slave label
 
 ![image](https://user-images.githubusercontent.com/47079437/216126381-6e624934-bd45-4c69-b05d-ea3865cc9ea2.png)
 
