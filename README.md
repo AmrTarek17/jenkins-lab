@@ -127,6 +127,8 @@
 
 ### 3 from jenkins master create new node with the slave container
 ![image](https://user-images.githubusercontent.com/47079437/216120254-0d0472a7-8566-49d4-81d7-2c9e605fea78.png)
+![image](https://user-images.githubusercontent.com/47079437/216123089-9044a861-7017-4bc1-93ae-aff13ea1070f.png)
+
 
 ### 4- integrate slack with jenkins
 ![image](https://user-images.githubusercontent.com/47079437/215879453-11223b66-3c4b-4e85-9b9a-3a79f1db2b63.png)
