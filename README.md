@@ -114,7 +114,7 @@
 
     ```
 ### 2- create container from this image and configure ssh
-    ssh already cofigured with docker file only need to let id_rsa.pub in the same Dir and configure id_rsa with jenkins Credintials
+   ssh already cofigured with docker file only need to let id_rsa.pub in the same Dir and configure id_rsa with jenkins Credintials
     ```
     docker build -t amrtarek6/jenkins_slave:version -f Dockefile_slave .
     docker run -it -d --name slave -v /var/run/docker.sock:/var/run/docker.sock amrtarek6/jenkins_slave:version
